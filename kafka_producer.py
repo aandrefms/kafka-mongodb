@@ -31,7 +31,7 @@ def get_weather_detail(openweathermap_api_endpoint):
 
 def get_appid(appid):
     if appid is None:
-        appid = "78f12d31ea56f9fff2c792c49ad29909"
+        appid = input('Digite a sua API KEY')
     else:
         pass
     return appid
