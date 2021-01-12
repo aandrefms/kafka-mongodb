@@ -8,11 +8,7 @@ kafka_topic_name = 'temperaturas'
 
 producer = KafkaProducer(bootstrap_servers=kafka_boostrap_servers,
                          value_serializer=lambda x: json.dumps(x).encode('utf-8'))
-json_message = None
-nome_cidade = None
-temperatura = None
-umidade = None
-openweathermap_api_endpoint = None
+
 appid = None
 
 
@@ -31,7 +27,7 @@ def get_weather_detail(openweathermap_api_endpoint):
 
 def get_appid(appid):
     if appid is None:
-        appid = "Digite_sua_openweather_key"
+        appid = "Digite_sua_Openweather_key"
     else:
         pass
     return appid
