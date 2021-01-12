@@ -4,7 +4,7 @@ from kafka.producer import KafkaProducer
 import requests
 
 kafka_boostrap_servers = '127.0.0.1:9092'
-kafka_topic_name = 'cities'
+kafka_topic_name = 'temperaturas'
 
 producer = KafkaProducer(bootstrap_servers=kafka_boostrap_servers,
                          value_serializer=lambda x: json.dumps(x).encode('utf-8'))
@@ -31,7 +31,7 @@ def get_weather_detail(openweathermap_api_endpoint):
 
 def get_appid(appid):
     if appid is None:
-        appid = input('Digite a sua API KEY')
+        appid = "78f12d31ea56f9fff2c792c49ad29909"
     else:
         pass
     return appid
