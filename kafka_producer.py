@@ -31,7 +31,7 @@ def get_weather_detail(openweathermap_api_endpoint):
 
 def get_appid(appid):
     if appid is None:
-        appid = "78f12d31ea56f9fff2c792c49ad29909"
+        appid = "Digite_sua_openweather_key"
     else:
         pass
     return appid
@@ -43,8 +43,8 @@ while True:
     openweathermap_api_endpoint = 'http://api.openweathermap.org/data/2.5/weather?q=' + nome_cidade + '&APPID=' + appid
     json_message = get_weather_detail(openweathermap_api_endpoint)
     producer.send(kafka_topic_name, json_message)
-    print("Published Message 1:" + json.dumps(json_message))
-    print("Wait for 2 seconds... ")
+    print("Publicando mensagem :" + json.dumps(json_message))
+    print("Esperando por 2 segundos")
     time.sleep(2)
 
     nome_cidade = 'Rio de Janeiro'
@@ -52,8 +52,8 @@ while True:
     openweathermap_api_endpoint = 'http://api.openweathermap.org/data/2.5/weather?q=' + nome_cidade + '&APPID=' + appid
     json_message = get_weather_detail(openweathermap_api_endpoint)
     producer.send(kafka_topic_name, json_message)
-    print("Published Message 1:" + json.dumps(json_message))
-    print("Wait for 2 seconds... ")
+    print("Publicando mensagem :" + json.dumps(json_message))
+    print("Esperando por 2 segundos")
     time.sleep(2)
 
     nome_cidade = 'Brasília'
@@ -61,8 +61,8 @@ while True:
     openweathermap_api_endpoint = 'http://api.openweathermap.org/data/2.5/weather?q=' + nome_cidade + '&APPID=' + appid
     json_message = get_weather_detail(openweathermap_api_endpoint)
     producer.send(kafka_topic_name, json_message)
-    print("Published Message 1:" + json.dumps(json_message))
-    print("Wait for 2 seconds... ")
+    print("Publicando mensagem :" + json.dumps(json_message))
+    print("Esperando por 2 segundos")
     time.sleep(2)
     
     time.sleep(120)
