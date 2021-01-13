@@ -14,3 +14,6 @@ def inserir_database(message):
         'Umidade': message['Umidade'],
         'Date': message['CreationTime']
     })
+    '''todos.insert_one({
+        message
+    })'''

@@ -25,6 +25,7 @@ def get_weather_detail(openweathermap_api_endpoint):
     return json_message
 
 
+# Digite sua Open Weather Key
 def get_appid(appid):
     if appid is None:
         appid = "Digite_sua_Openweather_key"
