@@ -7,6 +7,9 @@ client = MongoClient(f'mongodb+srv://{usuario}:{senha}@'
 
 db = client.acme
 todos = db.todos
+
+
+# inserir dados no mongodb database
 def inserir_database(message):
     todos.insert_one({
         'NomeCidade': message["NomeCidade"],
