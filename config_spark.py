@@ -20,6 +20,7 @@ lines = spark \
     .load()
 lines.printSchema()
 
+# separar por linhas
 words = lines.select(
    explode(
        split(lines.value, " ")
